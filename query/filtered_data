@@ -1,5 +1,5 @@
 CREATE STREAM stream1(uuid varchar KEY,ref varchar, type varchar, m array<struct<tz varchar, k varchar, v double, u varchar>>)
-WITH (kafka_topic='mqtt', value_format='JSON_SR');
+WITH (kafka_topic='mqtt_data', value_format='JSON_SR');
 
 CREATE STREAM filtered_data AS
 SELECT uuid, ref, type, EXPLODE(m)->tz AS tz, EXPLODE(m)->k AS measure, EXPLODE(m)->v AS value, EXPLODE(m)->u AS unit
