@@ -1,0 +1,12 @@
+{
+  "name": "mqtt-source",
+  "config": {
+    "connector.class": "io.confluent.connect.mqtt.MqttSourceConnector",
+    "tasks.max": "1",
+    "mqtt.server.uri": "wss://cloud.smartplatform.io/mqtt",
+    "mqtt.username": "serviceuser@unicam.it",
+    "mqtt.password": "3n1c4m$67$$1!",
+    "kafka.topic": "mqtt_data",
+    "mqtt.topics": "/unicam.it/jz/device/snapshot/0000/edv/#"
+  }
+}
