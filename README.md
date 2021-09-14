@@ -1,0 +1,2 @@
+# elk-IoT
+The objective of the project is to create a set of IoT data visualization dashboards based on Elasticsearch (https://www.elastic.co/). The data to be monitored will be IoT sensors installed in the Computer Science department and classrooms of Camerino University. Initially the IoT data will consider the ones from Filippetti sensors. Data must be ingested in real time by Elasticsearch, displayed on one or more visualization dashboards defined in Kibana.  
