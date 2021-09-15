@@ -9,6 +9,7 @@ Data must be ingested with Kafka and sent in real time to Elasticsearch and disp
 - Ubuntu 21.04 64 bit
 - Java 11.0
 - Docker 20.10
+- PuTTY 0.75 64 bit
 
 ## Installation
 - [Elasticsearch 7.10](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html)
