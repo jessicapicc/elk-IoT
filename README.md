@@ -23,7 +23,7 @@ Start Elasticsearch and Kibana with docker-compose.
 ```
 Create an index in Elasticsearch.
 ```bash
-  curl -X PUT http://localhost:9200/ndex_name
+  curl -X PUT http://localhost:9200/index_name
 ```
 Create a Pipeline in Elaticsearch to convert the datafield from a string format into a data format.
 ```bash
