@@ -77,11 +77,14 @@ Create and Write a Stream using KSQL to filter the mqtt data and create a new to
 
 Add the Elasticsearch sink connector to pass the data from the topic where there are the filtered data to Elasticsearch. 
 
+![App Screenshot](https://github.com/jessicapicc/elk-IoT/blob/main/image/elastic-connector.png)
+
 Test if the data are in the topic with the command:
 ```bash
 curl -XGET 'http://localhost:9200/index_name/_search?pretty'
 ``` 
 Open Kibana at [http://localhost:5601/](http://localhost:5601/), create the index pattern and to conclude create your custom dashboard.
+
 ![App Screenshot](https://github.com/jessicapicc/elk-IoT/blob/main/image/dashboard.png)
 
 
