@@ -61,8 +61,6 @@ Launch Confluent from any directory with the underneath command:
 
 Navigate to the Control Center web interface at [http://localhost:9021/](http://localhost:9021/) and select your cluster
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
 Install the source and sink connectors you need with the command
 ```bash
   confluent-hub install confluentinc/kafka-connect-mqtt:latest
@@ -72,6 +70,8 @@ Install the source and sink connectors you need with the command
 Create the topic you need. 
 
 Add the Mqtt source connector to take the data in real time from the Filippetti broker and put it into the topic that you defined. 
+
+![App Screenshot](https://github.com/jessicapicc/elk-IoT/blob/main/image/mqtt-connector.png)
 
 Create and Write a Stream using KSQL to filter the mqtt data and create a new topic with the filtered data
 
