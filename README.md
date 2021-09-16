@@ -82,6 +82,8 @@ Test if the data are in the topic with the command:
 curl -XGET 'http://localhost:9200/index_name/_search?pretty'
 ``` 
 Open Kibana at [http://localhost:5601/](http://localhost:5601/), create the index pattern and to conclude create your custom dashboard.
+![App Screenshot](https://github.com/jessicapicc/elk-IoT/blob/main/image/dashboard.png)
+
 
 ## Related
 
