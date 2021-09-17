@@ -24,11 +24,11 @@ Start Elasticsearch and Kibana with docker-compose.
 ```
 Create an index in Elasticsearch.
 ```bash
-  curl -X PUT http://localhost:9200/index_name
+  curl -X PUT http://hostname:9200/index_name
 ```
 Create a Pipeline in Elaticsearch to convert the datafield from a string format into a data format.
 ```bash
-curl -X PUT "localhost:9200/_ingest/pipeline/my-pipeline?pretty" -H 'Content-Type: application/json' -d'
+curl -X PUT "hostname:9200/_ingest/pipeline/my-pipeline?pretty" -H 'Content-Type: application/json' -d'
 {
   "description" : "...",
   "processors" : [
@@ -45,7 +45,7 @@ curl -X PUT "localhost:9200/_ingest/pipeline/my-pipeline?pretty" -H 'Content-Typ
 ```
 Set the pipeline as default pipeline for the index.
 ```bash
-curl -X PUT "localhost:9200/index_name/_settings" -H 'Content-Type: application/json' -d'
+curl -X PUT "hostname:9200/index_name/_settings" -H 'Content-Type: application/json' -d'
 {
   "settings": {
     "index.default_pipeline": "my-pipeline"
@@ -59,7 +59,7 @@ Launch Confluent from any directory with the underneath command:
   confluent local services start
 ```
 
-Navigate to the Control Center web interface at [http://localhost:9021/](http://localhost:9021/) and select your cluster
+Navigate to the Control Center web interface at [http://hostname:9021/](http://hostname:9021/) and select your cluster
 
 Install the source and sink connectors you need with the command
 ```bash
@@ -81,9 +81,9 @@ Add the Elasticsearch sink connector to pass the data from the topic where there
 
 Test if the data are in the topic with the command:
 ```bash
-curl -XGET 'http://localhost:9200/index_name/_search?pretty'
+curl -XGET 'http://hostname:9200/index_name/_search?pretty'
 ``` 
-Open Kibana at [http://localhost:5601/](http://localhost:5601/), create the index pattern and to conclude create your custom dashboard.
+Open Kibana at [http://hostname:5601/](http://hostname:5601/), create the index pattern and to conclude create your custom dashboard.
 
 ![App Screenshot](https://github.com/jessicapicc/elk-IoT/blob/main/image/dashboard.png)
 
